@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #1f2020;
+    }
+    button {
+        font-size: 18px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        will-change: box-shadow, transform;
+        background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+        box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+        padding: 0 2em;
+        border-radius: 0.3em;
+        color: #fff;
+        height: 2.6em;
+        text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+        transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    button:hover {
+        box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+        transform: translateY(-0.1em);
+    }
+
+    button:active {
+        box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+        transform: translateY(0em);
+    }
+    
+    #title{
+        color: #ffffff;
+        letter-spacing: 0;
+        text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    }
+</style>
+
+<body>
+    <div style="text-align: center">
+        <h1 id="title">Done</h1>
+        <form action="/download/{{filename}}" method="GET">
+            <button type="submit"><b>下载</b></button>
+        </form>
+    </div>
+
+</body>
+
+</html>

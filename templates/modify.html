@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adofai Map VFX Remover - Choose</title>
+</head>
+<style>
+    body {
+        background: #1f2020;
+    } 
+    b {
+        color: white;
+    }
+
+    #button {
+        font-size: 12px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        will-change: box-shadow, transform;
+        background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+        box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+        padding: 0 2em;
+        border-radius: 0.3em;
+        color: #fff;
+        height: 2.6em;
+        text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+        transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    #button:hover {
+        box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+        transform: translateY(-0.1em);
+    }
+
+    #button:active {
+        box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+        transform: translateY(0em);
+    }
+</style>
+<body>
+    <form method="POST" enctype="multipart/form-data" action="">
+        <input type="checkbox" name="box" value="MoveTrack"><b>MoveTrack</b><br>
+        <input type="checkbox" name="box" value="ColorTrack"><b>ColorTrack</b><br>
+        <input type="checkbox" name="box" value="RecolorTrack"><b>RecolorTrack</b><br>
+        <input type="checkbox" name="box" value="SetFilter"><b>SetFilter</b><br>
+        <input type="checkbox" name="box" value="HallOfMirrors"><b>HallOfMirrors</b><br>
+        <input type="checkbox" name="box" value="ShakeScreen"><b>ShakeScreen</b><br>
+        <input type="checkbox" name="box" value="Bloom"><b>Bloom</b><br>
+        <input type="checkbox" name="box" value="MoveCamera"><b>MoveCamera</b><br>
+        <input type="checkbox" name="box" value="MoveDecorations"><b>MoveDecorations</b><br>
+        <input type="checkbox" name="box" value="AddDecoration"><b>AddDecoration</b><br>
+        <input type="checkbox" name="box" value="Flash"><b>Flash</b><br>
+        <input type="checkbox" name="box" value="CustomBackground"><b>CustomBackground</b><br>
+        <input type="submit" id="button" value="提交">
+    </form>
+</body>
+</html>
