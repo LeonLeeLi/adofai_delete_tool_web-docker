@@ -1,1 +1,1 @@
-gunicorn --config=gunicorn.py app:app
+python3 delete.py

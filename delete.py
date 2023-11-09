@@ -3,7 +3,7 @@ import time
 import shutil
 
 # 启动 app.py 并获取其 pid
-process = subprocess.Popen(['python', 'app.py'])
+process = subprocess.Popen(['gunicorn', '--config=gunicorn.py', 'app:app'])
 
 while True:
     # 在指定时间关闭 app.py
@@ -21,6 +21,6 @@ while True:
     # 在指定时间重新启动 app.py
     current_time = time.strftime("%H:%M", time.localtime())
     if current_time == "00:10":
-        process = subprocess.Popen(['python', 'app.py'])
+        process = subprocess.Popen(['gunicorn', '--config=gunicorn.py', 'app:app'])
 
     time.sleep(25)
